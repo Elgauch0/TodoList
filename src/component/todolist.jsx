@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
 function Todolist() {
-    const [tasks,setTasks]=useState(["wake up ","shower ","study"]);
+
+    const [tasks,setTasks]=useState([]);
     const [task,setTask]=useState("");
 
     function handleInputChange(e){
@@ -41,6 +42,7 @@ function Todolist() {
     
     <div className='text-center border-2 m-auto max-w-xl h-auto p-6 shadow-2xl rounded-3xl mt-3'>
     <h1  className='text-3xl '>To do List</h1>
+    
     <input type="text"  placeholder='enter une tache' value={task} onChange={handleInputChange} className='text-center p-2 m-3 rounded-xl shadow-xl' /><br></br>
     <button type='submit' className='bg-green-600 w-32 rounded-xl m-3 p-2'  onClick={addTask}> Enregistrer </button>
     <ol >
